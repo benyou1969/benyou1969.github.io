@@ -1,0 +1,106 @@
+:root {
+      --base: #ffc600;
+      --spacing: 20px 10px;
+      --blur: 10px;
+      --dark: #193549;
+      --light: #E8EBF3;
+}
+
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      color: white
+}
+
+body {
+      font-family: 'helvetica neue',
+            sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+      background-color: var(--dark);
+}
+
+a {
+      text-decoration: none;
+}
+
+#app {
+      width: 100%;
+}
+
+.header {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      align-items: center;
+}
+
+.logo {
+      border-radius: 50px;
+      height: 6rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+            0 6px 6px rgba(0, 0, 0, 0.23);
+      margin-right: 15px;
+      filter: blur(2px);
+      transition: all .2s;
+}
+
+.logo:hover {
+      filter: blur(0px);
+
+}
+
+.socials {
+      position: fixed;
+      display: block;
+      left: 20px;
+      bottom: 20px;
+}
+
+.socials a {
+      display: block;
+      width: 30px;
+      opacity: .2;
+      transform: scale(var(--scale, .8));
+      transition: transform .3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+}
+
+.socials a:hover {
+      --scale: 1;
+}
+
+.social-icons {
+      fill: white
+}
+
+.container {
+      display: flex;
+      margin: 10px 10rem 0 10rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+}
+
+.wakatime {
+      width: 500px;
+}
+
+@media screen and (max-width: 900px) {
+      .container {
+           display: flex;
+           margin: 4px;
+           justify-content: center;
+           flex-wrap: wrap;
+           text-align: center;
+      }
+
+      .socials {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: static;
+            text-align: center;
+      }
+
+}
